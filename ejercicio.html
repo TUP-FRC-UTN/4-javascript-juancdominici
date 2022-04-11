@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      id="viewport"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Formulario</title>
+  </head>
+  <body>
+    <div class="form">
+      <h2 class="titulo-form">Forms</h2>
+      <form>
+        <label class="label">Nombre de usuario: </label><br />
+        <input
+          class="input label"
+          type="text"
+          id="nombreUsuario"
+          name="nombreUsuario"
+        /><br />
+        <label class="label">Contraseña: </label><br />
+        <input
+          class="input label"
+          type="password"
+          id="contraseña"
+          name="contraseña"
+        /><br />
+        <label class="label">Sexo: </label><br />
+        <input type="radio" id="sexo" name="sexo" value="hombre" />
+        <label class="label">Hombre</label><br />
+        <input type="radio" id="sexo" name="sexo" value="mujer" />
+        <label class="label">Mujer</label><br />
+        <input type="radio" id="sexo" name="sexo" value="otro" checked />
+        <label class="label">Otro</label><br />
+        <br />
+        <label class="label">Fecha de nacimiento: </label><br />
+        <input
+          class="input label"
+          type="date"
+          id="fechaNacimiento"
+          name="fechaNacimiento"
+          max="2022-03-23"
+          min="1950-01-01"
+        /><br />
+
+        <label class="label">Correo electrónico: </label><br />
+        <input
+          class="input label"
+          type="email"
+          id="correoElectronico"
+          name="correoElectronico"
+        /><br />
+
+        <input
+          class="input button"
+          type="submit"
+          value="Registrarse"
+          onclick="guardar()"
+        />
+      </form>
+    </div>
+
+    <script>
+      function validar() {
+        let nombreUsuario = document.getElementById("nombreUsuario").value;
+        let contraseña = document.getElementById("contraseña").value;
+        let correoElectronico =
+          document.getElementById("correoElectronico").value;
+        let fechaNacimiento = document.getElementById("fechaNacimiento").value;
+        let sexo = document.getElementsByName("sexo");
+
+        if (nombreUsuario == "") {
+          alert("El campo nombre de usuario está vacío");
+          return false;
+        } else if (contraseña == "") {
+          alert("El campo contraseña está vacío");
+          return false;
+        } else if (correoElectronico == "") {
+          alert("El campo correo electrónico está vacío");
+          return false;
+        } else if (fechaNacimiento == "") {
+          alert("El campo fecha de nacimiento está vacío");
+          return false;
+        } else if (sexo == "") {
+          alert("El campo sexo está vacío");
+          return false;
+        }
+      }
+      function guardar() {
+        if (validar()) {
+          alert("Registrado con Exito!");
+        } else {
+          alert("Error de validación");
+        }
+      }
+    </script>
+  </body>
+</html>

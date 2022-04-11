@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+
+    <title>Clase 4 - Javascript</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="titulo">Bienvenidos a Programación III</h1>
+      <label for="txtDate">Año: </label><br />
+      <input type="text" name="txtDate" id="txtDate" /><br />
+      <button id="btnCargarFecha">Cargar Fecha</button>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      /* let nombre = "Juan";
+      nombre = 10;
+
+      let array = [1, 2, 3, 4, 5];
+      let array2 = new Array(3).fill(0);
+      let array3 = [0, 0, 0];
+      console.log(array2, array3); */
+
+      let array1 = ["Pepe", "Juan", "Pedro"];
+      /* alert("Hola y bienvenido a la clase" + array1[0]);
+      alert("Hola y bienvenido a la clase" + array1[1]);
+      alert("Hola y bienvenido a la clase" + array1[2]); */
+
+      /* for (let i = 0; i < array1.length; i++) {
+        console.log(i);
+        alert("Hola y bienvenido a la clase " + array1[i]);
+      } */
+      /* for (const item of array1) {
+        console.log(item);
+        alert("Hola y bienvenido a la clase " + item);
+      } */
+
+      let array = [
+        1,
+        "Pedro",
+        true,
+        null,
+        undefined,
+        [1, 2, 3],
+        { nombre: "Juan" },
+      ];
+      for (const item of array) {
+        console.log(item);
+        alert("Hola y bienvenido a la clase " + item);
+      }
+    </script>
+  </body>
+</html>
